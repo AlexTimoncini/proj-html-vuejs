@@ -9,10 +9,10 @@
         <h2 class="ivy_slogan">Imagine, Create, Experience</h2>
         <h1 class="ivy_title">We Animate <br>With Ninja-Like Precision</h1>
         <p class="ivy_desc">We are a character-driven animation studio striving to make high-quality animations.</p>
-        <button class="pink_btn">
+        <button class="ivy_btn pink_btn">
             <a href="#">Start a Project</a>
         </button>
-        <button>
+        <button class="ivy_btn pink_border">
             <a href="#">Portfolio</a>
         </button>
         <div class="ivy_hero">
@@ -47,6 +47,32 @@
             padding-bottom: 2rem;
         }
 
+        .ivy_btn{
+            padding: 0.9rem 2.5rem;
+            border-radius: 35px;
+            margin-right: 1.2rem;
+            border: none;
+
+            a{
+                color: $purple;
+                font-weight: 400;
+                font-size: 1.2rem;
+            }
+        }
+
+        .pink_btn{
+            background-color: $pink;
+        }
+
+        .pink_border{
+            background: none;
+            border: 1px solid $pink;
+
+            a{
+                color: $white;
+            }
+        }
+
         .ivy_hero{
             width: 100%;
             margin-top: 80px;
@@ -68,6 +94,7 @@
                     color: $white;
                 }
             }
+
         }
     }
 </style>

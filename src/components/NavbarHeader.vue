@@ -47,7 +47,7 @@
             <li class="ivy_nav_item" v-for="link in navLinks">
                 <a :href="link.link">{{ link.title }}</a>
             </li>
-            <li class="ivy_nav_item_btn">
+            <li class="pink_btn">
                 <a href="#">Get A Quote</a>
             </li>
         </ul>
@@ -56,7 +56,7 @@
 
 <style lang="scss">
     @use '../styles/partials/mixin' as *;
-    @use '../styles/partials/varibales' as *;
+    @use '../styles/partials/variables' as *;
 
     nav{
         @include flex(row, space-between, center, nowrap);
@@ -75,7 +75,7 @@
                 }
             }
 
-            .ivy_nav_item_btn{
+            .pink_btn{
                 padding: 0.9rem 1.9rem;
                 background-color: $pink;
                 border-radius: 35px;

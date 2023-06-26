@@ -15,5 +15,9 @@
 </template>
 
 <style lang="scss">
-    
+    header {
+        background-image: url(../assets/banner-bg.png);
+        background-repeat: no-repeat;
+        background-position: top;
+    }
 </style>

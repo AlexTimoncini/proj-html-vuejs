@@ -12,3 +12,8 @@ box-sizing: border-box;
 body{
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
+
+.container_size{
+    max-width: 1200px;
+    margin: 0 auto;
+}

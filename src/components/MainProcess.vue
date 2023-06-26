@@ -1,6 +1,6 @@
 <script>
     export default {
-        name: 'Mainprocess',
+        name: 'MainProcess',
     }
 </script>
 

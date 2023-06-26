@@ -7,7 +7,6 @@
 <template>
     <section id="animationLove">
         <div class="container_size">
-
             <div class="ivy_small_container">
                 <h2 class="ivy_slogan">Our Love For Animation</h2>
                 <h1 class="ivy_title">We're Storytelling Experts With Creative Smarts</h1>
@@ -37,7 +36,9 @@
                 </div>
             </div>
         </div>
+        <!-- Background Images -->
         <img src="../assets/smart4.png" alt="yellow rocket" class="ivy_rocket">
+        <img src="../assets/smart.png" alt="user with smart glasses" class="ivy_left_man">
     </section>
 </template>
 
@@ -76,7 +77,11 @@
                 background-color: antiquewhite;
                 border-radius: 35px;
                 border: 1px solid rgb(178,181,210);
+                transition: all 0.2s linear;
 
+                img{
+                    margin: 0 auto;
+                }
                 .ivy_card_title{
                     font-size: 1.8rem;
                     margin: 1rem 0;
@@ -86,6 +91,33 @@
                     font-size: 1.1rem;
                 }
             }
+
+            .ivy_card:nth-child(1){
+                background: linear-gradient(#ffffff, #FFF2EA);
+
+                &:hover{
+                    background: linear-gradient(#FFF2EA,#ffffff );
+                    border-color: transparent;
+                }
+            }
+
+            .ivy_card:nth-child(2){
+                background: linear-gradient(#ffffff, #EEECFC);
+
+                &:hover{
+                    background: linear-gradient(#EEECFC,#ffffff );
+                    border-color: transparent;
+                }
+            }
+
+            .ivy_card:nth-child(3){
+                background: linear-gradient(#ffffff, #FFE7E8);
+
+                &:hover{
+                    background: linear-gradient(#FFE7E8,#ffffff );
+                    border-color: transparent;
+                }
+            }
         }
         .ivy_rocket{
             position: absolute;
@@ -93,6 +125,14 @@
             bottom: 5px;
             height: 200px;
             z-index: -1;
+        }
+
+        .ivy_left_man{
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            z-index: -1;
+            transform: translateY(-50%);
         }
     }
 </style>

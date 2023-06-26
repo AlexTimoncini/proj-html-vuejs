@@ -28,6 +28,7 @@
 
 <template>
     <section id="counter">
+        <img src="../assets/shape-top.png" alt="white wavy shape" class="wave wave_top">
         <div class="container_size">
             <h1>Anidio Quick Facts</h1>
             <div class="ivy_cards">
@@ -37,6 +38,7 @@
                 </div>
             </div>
         </div>
+        <img src="../assets/shape-bottom.png" alt="white wavy shape" class="wave wave_bot">
     </section>
 </template>
 
@@ -47,34 +49,54 @@
         background-image: url(../assets/counter-bg.png);
         background-size: cover;
         color: $white;
-        padding: 100px 0;
         text-align: center;
+        position: relative;
 
-        h1{
-            font-size: 3.5rem;
-            margin-bottom: 5rem;
-        }
+        .container_size{
+            padding: 100px 0;
+            h1{
+                font-size: 3.5rem;
+                margin-bottom: 5rem;
+            }
 
-        .ivy_cards{
-            @include flex();
-            column-gap: 2rem;
+            .ivy_cards{
+                @include flex();
+                column-gap: 2rem;
 
-            .ivy_card{
-                border: 1px solid $darkGrey;
-                width: calc(100% / 4);
-                flex-shrink: 1;
-                padding: 3rem 0;
-                border-radius: 20px;
+                .ivy_card{
+                    border: 1px solid $darkGrey;
+                    width: calc(100% / 4);
+                    flex-shrink: 1;
+                    padding: 3rem 0;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    transition: all 0.1s linear;
+                    h2{
+                        font-size: 3rem;
+                    }
 
-                h2{
-                    font-size: 3rem;
-                }
+                    p{
+                        font-size: 1.1rem;
+                        color: $orange;
+                    }
 
-                p{
-                    font-size: 1.1rem;
-                    color: $orange;
+                    &:hover{
+                        transform: rotateY(20deg) rotateX(-20deg);
+                    }
                 }
             }
         }
+        .wave{
+            position: absolute;
+            width: 100%;
+            left: 0;
+        }
+        .wave_top{
+            top: 0;
+        }
+        .wave_bot{
+            bottom: 0;
+        }
+        
     }
 </style>

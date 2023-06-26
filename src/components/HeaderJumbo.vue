@@ -17,13 +17,16 @@
         </button>
         <div class="ivy_hero">
             <img src="../assets/middle.png" alt="">
+            <button class="ivy_playpause">
+                <i class="fa-solid fa-play"></i>
+            </button>
         </div>
     </section>
 </template>
 
 <style lang="scss">
     @use '../styles/partials/variables' as *;
-
+    @use '../styles/partials/mixin' as *;
     #jumbotron{
         color: $white;
         text-align: center;
@@ -47,8 +50,23 @@
         .ivy_hero{
             width: 100%;
             margin-top: 80px;
+            position: relative;
             img{
                 width: 100%;
+            }
+
+            .ivy_playpause{
+                @include positionCenter;
+                background-color: #A616EA;
+                border: none;
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+                text-align: center;
+                i{
+                    font-size: 1.5rem;
+                    color: $white;
+                }
             }
         }
     }

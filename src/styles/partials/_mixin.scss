@@ -5,3 +5,10 @@
     align-items: $align;
     flex-wrap: $wrap;
 }
+
+@mixin positionCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

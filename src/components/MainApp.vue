@@ -5,6 +5,8 @@
     import MainProcess from './MainProcess.vue';
     import MainTeam from './MainTeam.vue'
     import MainClients from './MainClients.vue'
+    import MainTips from './MainTips.vue'
+
     export default {
         name: 'MainApp',
         components: {
@@ -14,6 +16,7 @@
             MainProcess,
             MainTeam,
             MainClients,
+            MainTips,
         }
     }
 </script>
@@ -25,6 +28,7 @@
     <MainProcess />
     <MainTeam />
     <MainClients />
+    <MainTips />
 </template>
 
 <style lang="scss" scoped>

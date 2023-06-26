@@ -31,7 +31,6 @@
         color: $white;
         text-align: center;
         padding-top: 80px;
-
         .ivy_slogan{
             color: $orange;
             padding-bottom: 1.5rem;
@@ -77,6 +76,7 @@
             width: 100%;
             margin-top: 80px;
             position: relative;
+            z-index: 2;
             img{
                 width: 100%;
             }

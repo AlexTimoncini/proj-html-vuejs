@@ -36,6 +36,7 @@
         },
         mounted() {
             this.myCarousel = this.$refs.myCarousel;
+            this.observeTitle();
         },
         methods: {
             prev(){
@@ -46,7 +47,17 @@
             },
             getImagePath: function(imgPath) {
                 return new URL(imgPath, import.meta.url).href;
-            }
+            },
+            observeTitle(){
+                const observer = new IntersectionObserver((entries, observer) =>{
+                    entries.filter(e => e.isIntersecting).forEach(entry =>{
+                        entry.target.classList.add('slide_from_top');
+                        observer.unobserve(entry.target);
+                    });
+                });
+                const titles = document.querySelectorAll('.ivy_heading')
+                titles.forEach(title => observer.observe(title));
+            },
         }
     }
 </script>
@@ -59,9 +70,11 @@
             </div>
             <div class="ivy_right_side">
                 <div class="ivy_small_container">
-                    <h2 class="ivy_slogan">Our Process</h2>
-                    <h1 class="ivy_title">Our Process for Your Animation Production</h1>
-                    <p class="ivy_desc">We have an effective process for working on animation</p>
+                    <div class="ivy_heading">
+                        <h2 class="ivy_slogan">Our Process</h2>
+                        <h1 class="ivy_title">Our Process for Your Animation Production</h1>
+                        <p class="ivy_desc">We have an effective process for working on animation</p>
+                    </div>
                     <Carousel
                     v-if="processList.length!==0"
                     ref="myCarousel"
@@ -129,16 +142,28 @@
                 .ivy_small_container{
                     width: 100%;
                     margin: 0 auto;
-                    .ivy_slogan{
-                        color: $blue;
-                        padding-bottom: 1.5rem;
+
+                    .ivy_heading{
+                        opacity: 0;
+                        transform: translateY(-20px);
+                        transition: all 1s linear;
+                        transition-delay: 200ms;
+                        .ivy_slogan{
+                            color: $blue;
+                            padding-bottom: 1.5rem;
+                        }
+                        .ivy_title{
+                            font-size: 3.5rem;
+                            padding-bottom: 1rem;
+                        }
+                        .ivy_desc{
+                            padding-bottom: 2rem
+                        }
                     }
-                    .ivy_title{
-                        font-size: 3.5rem;
-                        padding-bottom: 1rem;
-                    }
-                    .ivy_desc{
-                        padding-bottom: 2rem
+
+                    .ivy_heading.slide_from_top{
+                        opacity: 1;
+                        transform: translateY(0);
                     }
                     .carousel__item {
                         @include flex(column, center, center, nowrap);

@@ -41,8 +41,21 @@
         methods: {
             getImagePath: function(imgPath) {
                 return new URL(imgPath, import.meta.url).href;
-            }
-        }
+            },
+            observeTitle(){
+                const observer = new IntersectionObserver((entries, observer) =>{
+                    entries.filter(e => e.isIntersecting).forEach(entry =>{
+                        entry.target.classList.add('slide_from_top');
+                        observer.unobserve(entry.target);
+                    });
+                });
+                const titles = document.querySelectorAll('.ivy_small_container')
+                titles.forEach(title => observer.observe(title));
+            },
+        },
+        mounted() {
+            this.observeTitle();
+        },
     }
 </script>
 
@@ -84,6 +97,11 @@
             margin: 0 auto;
             text-align: center;
             padding-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 1s linear;
+            transition-delay: 200ms;
+
             .ivy_slogan{
                 color: $blue;
                 padding-bottom: 1.5rem;
@@ -92,6 +110,11 @@
                 font-size: 3.5rem;
                 padding-bottom: 1rem;
             }
+        }
+
+        .ivy_small_container.slide_from_top{
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 </style>

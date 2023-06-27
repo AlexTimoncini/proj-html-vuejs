@@ -40,6 +40,9 @@
                 <button type="submit" @click.prevent="userMail = ''">Submit</button>
             </form>
         </div>
+        <!--BACKGROUND IMAGES-->
+        <img src="../assets/shape-top.png" alt="white wavy shape" id="top_wave">
+        <img src="../assets/shape-bottom.png" alt="white wavy shape" id="bot_wave">
     </section>
 </template>
 
@@ -52,6 +55,7 @@
         color: $white;
         padding: 100px 0;
         text-align: center;
+        position: relative;
         .ivy_small_container{
             width: 60%;
             margin: 0 auto;
@@ -91,5 +95,19 @@
             }
         }
 
+        #top_wave{
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            top: 0;
+            display: block;
+        }
+        #bot_wave{
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            bottom: 0;
+            display: block;
+        }
     }
 </style>

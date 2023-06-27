@@ -11,10 +11,34 @@
                 ]
             }
         },
+        mounted(){
+            this.observeTitle();
+            this.observeCards();
+        },
         methods: {
             getImagePath: function(imgPath) {
                 return new URL(imgPath, import.meta.url).href;
             },
+            observeTitle(){
+                const observer = new IntersectionObserver((entries, observer) =>{
+                    entries.filter(e => e.isIntersecting).forEach(entry =>{
+                        entry.target.classList.add('slide_from_top');
+                        observer.unobserve(entry.target);
+                    });
+                });
+                const titles = document.querySelectorAll('.ivy_small_container')
+                titles.forEach(title => observer.observe(title));
+            },
+            observeCards(){
+                const observer = new IntersectionObserver((entries, observer) =>{
+                    entries.filter(e => e.isIntersecting).forEach(entry =>{
+                        entry.target.classList.add('slide_from_down');
+                        observer.unobserve(entry.target);
+                    });
+                });
+                const cards = document.querySelectorAll('.ivy_card')
+                cards.forEach(card => observer.observe(card));
+            }
         }
     }
 </script>
@@ -49,6 +73,10 @@
         padding: 100px 0;
         text-align: center;
         .ivy_small_container{
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 1s linear;
+            transition-delay: 200ms;
             width: 60%;
             margin: 0 auto;
             .ivy_slogan{
@@ -59,6 +87,11 @@
                 font-size: 3.5rem;
                 padding-bottom: 1rem;
             }
+        }
+
+        .ivy_small_container.slide_from_top{
+                opacity: 1;
+                transform: translateY(0px);
         }
 
         .ivy_cards{
@@ -74,6 +107,9 @@
                 position: relative;
                 border-radius: 20px;
                 overflow: hidden;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 1s linear;
 
                 img{
                     width: 100%;
@@ -112,6 +148,24 @@
                     color: $orange;
                 }
             }
+            }
+
+            .ivy_card:nth-child(1){
+                transition-delay: 200ms;
+            }
+            .ivy_card:nth-child(2){
+                transition-delay: 400ms;
+            }
+            .ivy_card:nth-child(3){
+                transition-delay: 600ms;
+            }
+            .ivy_card:nth-child(4){
+                transition-delay: 800ms;
+            }
+
+            .ivy_card.slide_from_down{
+                opacity: 1;
+                transform: translateY(0);
             }
 
         }

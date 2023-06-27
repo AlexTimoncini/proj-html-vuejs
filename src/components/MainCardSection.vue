@@ -2,10 +2,10 @@
     export default{
         name: 'MainCardSection',
         mounted(){
-            this.obesrveCards();
+            this.observeCards();
         },
         methods: {
-            obesrveCards(){
+            observeCards(){
                 const observer = new IntersectionObserver((entries, observer) =>{
                     entries.filter(e => e.isIntersecting).forEach(entry =>{
                         entry.target.classList.add('spawn');

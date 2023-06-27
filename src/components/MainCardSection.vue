@@ -1,6 +1,21 @@
 <script>
     export default{
-        name: 'MainCardSection'
+        name: 'MainCardSection',
+        mounted(){
+            this.obesrveCards();
+        },
+        methods: {
+            obesrveCards(){
+                const observer = new IntersectionObserver((entries, observer) =>{
+                    entries.filter(e => e.isIntersecting).forEach(entry =>{
+                        entry.target.classList.add('spawn');
+                        observer.unobserve(entry.target);
+                    });
+                });
+                const cards = document.querySelectorAll('.ivy_card')
+                cards.forEach(card => observer.observe(card));
+            }
+        },
     }
 </script>
 
@@ -78,7 +93,9 @@
                 border-radius: 35px;
                 border: 1px solid rgb(178,181,210);
                 transition: all 0.2s linear;
-
+                transform: translateY(20px);
+                opacity: 0;
+                transition: all 1s linear;
                 img{
                     margin: 0 auto;
                 }
@@ -94,7 +111,7 @@
 
             .ivy_card:nth-child(1){
                 background: linear-gradient(#ffffff, #FFF2EA);
-
+                transition-delay: 200ms;
                 &:hover{
                     background: linear-gradient(#FFF2EA,#ffffff );
                     border-color: transparent;
@@ -103,7 +120,7 @@
 
             .ivy_card:nth-child(2){
                 background: linear-gradient(#ffffff, #EEECFC);
-
+                transition-delay: 400ms;
                 &:hover{
                     background: linear-gradient(#EEECFC,#ffffff );
                     border-color: transparent;
@@ -112,11 +129,16 @@
 
             .ivy_card:nth-child(3){
                 background: linear-gradient(#ffffff, #FFE7E8);
-
+                transition-delay: 600ms;
                 &:hover{
                     background: linear-gradient(#FFE7E8,#ffffff );
                     border-color: transparent;
                 }
+            }
+
+            .ivy_card.spawn{
+                opacity: 1;
+                transform: translateY(0);
             }
         }
         .ivy_rocket{

@@ -43,7 +43,7 @@
 
 <template>
     <section id="counter">
-        <img src="../assets/shape-top.png" alt="white wavy shape" class="wave wave_top">
+        <img src="../assets/shape-top.png" alt="white wavy shape" class="wave wave_top" loading="lazy">
         <div class="container_size">
             <h1>Anidio Quick Facts</h1>
             <div class="ivy_cards">
@@ -54,8 +54,8 @@
             </div>
         </div>
         <!--BACKGROUND IMAGES-->
-        <img src="../assets/shape-bottom.png" alt="white wavy shape" class="wave wave_bot">
-        <img src="../assets/globe.png" alt="globe img" id="globeRotating">
+        <img src="../assets/shape-bottom.png" alt="white wavy shape" class="wave wave_bot" loading="lazy">
+        <img src="../assets/globe.png" alt="globe img" id="globeRotating" loading="lazy">
     </section>
 </template>
 

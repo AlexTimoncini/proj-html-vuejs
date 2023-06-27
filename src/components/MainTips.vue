@@ -56,8 +56,8 @@
             </form>
         </div>
         <!--BACKGROUND IMAGES-->
-        <img src="../assets/shape-top.png" alt="white wavy shape" id="top_wave">
-        <img src="../assets/shape-bottom.png" alt="white wavy shape" id="bot_wave">
+        <img src="../assets/shape-top.png" alt="white wavy shape" id="top_wave" loading="lazy">
+        <img src="../assets/shape-bottom.png" alt="white wavy shape" id="bot_wave" loading="lazy">
     </section>
 </template>
 

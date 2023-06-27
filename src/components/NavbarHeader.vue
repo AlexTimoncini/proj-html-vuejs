@@ -41,7 +41,7 @@
 <template>
     <nav class="container_size">
         <div class="ivy_logo_box">
-            <img src="../assets/logo.png" alt="Anidio Logo">
+            <img src="../assets/logo.png" alt="Anidio Logo" loading="lazy">
         </div>
         <ul class="ivy_nav_menu">
             <li class="ivy_nav_item" v-for="link in navLinks">

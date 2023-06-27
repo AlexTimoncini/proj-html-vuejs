@@ -29,21 +29,21 @@
             </div>
             <div class="ivy_cards">
                 <div class="ivy_card">
-                    <img src="../assets/smart1.png" alt="smart icon">
+                    <img src="../assets/smart1.png" alt="smart icon" loading="lazy">
                     <h3 class="ivy_card_title">3D modeling</h3>
                     <p class="ivy_card_desc">
                         We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we'll drill deep to deliver above and beyond your expectations.
                     </p>
                 </div>
                 <div class="ivy_card">
-                    <img src="../assets/smart2.png" alt="smart icon">
+                    <img src="../assets/smart2.png" alt="smart icon" loading="lazy">
                     <h3 class="ivy_card_title">Collaboration</h3>
                     <p class="ivy_card_desc">
                         We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we'll drill deep to deliver above and beyond your expectations.
                     </p>
                 </div>
                 <div class="ivy_card">
-                    <img src="../assets/smart3.png" alt="smart icon">
+                    <img src="../assets/smart3.png" alt="smart icon" loading="lazy">
                     <h3 class="ivy_card_title">Creativity</h3>
                     <p class="ivy_card_desc">
                         We constantly ask questions. It helps us shape your story and deliver the results you crave. Yep, we'll drill deep to deliver above and beyond your expectations.

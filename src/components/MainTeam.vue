@@ -97,7 +97,7 @@
                     <div class="carousel__item">
                         <div class="ivy_card">
                             <div class="ivy_icon_box">
-                                <img :src="getImagePath(member.pfp)" :alt="member.name + 'Profile picture'">
+                                <img :src="getImagePath(member.pfp)" :alt="member.name + 'Profile picture'" loading="lazy">
                             </div>
                             <h1>{{ member.name }}</h1>
                             <h2>{{ member.position }}</h2>
@@ -130,8 +130,8 @@
 
         </div>
         <!--BACKGROUND IMAGES-->
-        <img src="../assets/shape.png" alt="red mega dot" id="red_circle_left">
-        <img src="../assets/shape2.png" alt="red mega dot" id="red_circle_right">
+        <img src="../assets/shape.png" alt="red mega dot" id="red_circle_left" loading="lazy">
+        <img src="../assets/shape2.png" alt="red mega dot" id="red_circle_right" loading="lazy">
     </section>
 </template>
 

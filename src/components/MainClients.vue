@@ -78,7 +78,7 @@
                 <Slide v-for="client in clientList" :key="client">
                     <div class="carousel__item">
                         <div class="ivy_icon_box">
-                            <img :src="getImagePath(client.logo)" :alt="client.name">
+                            <img :src="getImagePath(client.logo)" :alt="client.name" loading="lazy">
                         </div>
                     </div>
                 </Slide>

@@ -66,7 +66,7 @@
     <section id="ourProcess">
         <div class="container_size">
             <div class="ivy_left_side">
-                <img src="../assets/process-thumb.png" alt="user riding a rocket">
+                <img src="../assets/process-thumb.png" alt="user riding a rocket" loading="lazy">
             </div>
             <div class="ivy_right_side">
                 <div class="ivy_small_container">
@@ -86,7 +86,7 @@
                         <Slide v-for="slide, index in processList" :key="slide">
                             <div class="carousel__item">
                                 <div class="ivy_icon_box">
-                                    <img :src="getImagePath(slide.img)" :alt="slide.name">
+                                    <img :src="getImagePath(slide.img)" :alt="slide.name" loading="lazy">
                                 </div>
                                 <h1>{{ slide.name }}</h1>
                                 <p>{{ slide.description }}</p>
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <!--BACKGROUND IMAGES-->
-            <img src="../assets/smart4.png" alt="yellow rocket" class="ivy_rocket">
+            <img src="../assets/smart4.png" alt="yellow rocket" class="ivy_rocket" loading="lazy"> 
 
         </div>
     </section>

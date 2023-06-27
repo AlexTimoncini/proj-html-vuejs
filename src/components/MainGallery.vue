@@ -54,7 +54,7 @@
             <div class="ivy_cards">
                 <div class="ivy_card" v-for="url,index in gallery">
                     <div class="ivy_wrapper">
-                        <img :src="getImagePath(url)" :alt="'work number ' + index">
+                        <img :src="getImagePath(url)" :alt="'work number ' + index" loading="lazy">
                         <div class="ivy_hover_wrap">
                             <button class="ivy_playpause">
                                 <i class="fa-solid fa-play"></i>

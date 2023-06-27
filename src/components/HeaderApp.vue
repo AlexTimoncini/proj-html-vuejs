@@ -15,16 +15,16 @@
         <NavbarHeader />
         <HeaderJumbo />
         <!-- Background Images -->
-        <img src="../assets/banner-bg.png" alt="background color purple" id="bgGradient">
-        <img src="../assets/shape-bottom.png" alt="wavy white shape" id="whiteWave">
-        <img src="../assets/left-man.png" alt="spaceman img" id="leftSpaceMan">
-        <img src="../assets/right-man.png" alt="spaceman img" id="rightSpaceMan">
-        <img src="../assets/dots-left.png" alt="stars img" id="leftStars">
-        <img src="../assets/dots-right.png" alt="stars img" id="rightStars">
-        <img src="../assets/globe1.png" alt="globe cartoon img" id="globeLeft">
-        <img src="../assets/globe2.png" alt="globe cartoon img" id="globeRight">
-        <img src="../assets/globe3.png" alt="globe cartoon img" id="globeTop">
-        <img src="../assets/light.png" alt="ufo spaceship img" id="ufo">
+        <img src="../assets/banner-bg.png" alt="background color purple" id="bgGradient" loading="lazy">
+        <img src="../assets/shape-bottom.png" alt="wavy white shape" id="whiteWave" loading="lazy">
+        <img src="../assets/left-man.png" alt="spaceman img" id="leftSpaceMan" loading="lazy">
+        <img src="../assets/right-man.png" alt="spaceman img" id="rightSpaceMan" loading="lazy">
+        <img src="../assets/dots-left.png" alt="stars img" id="leftStars" loading="lazy">
+        <img src="../assets/dots-right.png" alt="stars img" id="rightStars" loading="lazy">
+        <img src="../assets/globe1.png" alt="globe cartoon img" id="globeLeft" loading="lazy">
+        <img src="../assets/globe2.png" alt="globe cartoon img" id="globeRight" loading="lazy">
+        <img src="../assets/globe3.png" alt="globe cartoon img" id="globeTop" loading="lazy">
+        <img src="../assets/light.png" alt="ufo spaceship img" id="ufo" loading="lazy">
     </header>
 </template>
 

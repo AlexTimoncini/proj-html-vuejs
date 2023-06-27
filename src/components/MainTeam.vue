@@ -75,6 +75,7 @@
                 <p>We create new worlds!Let’s collaborate and create engaging, effective, award-winning animations</p>
             </div>
             <Carousel
+                v-if="teamList.length!==0"
                 ref="myCarousel"
                 :items-to-show="4" 
                 :wrap-around="true" 

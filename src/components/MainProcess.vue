@@ -63,6 +63,7 @@
                     <h1 class="ivy_title">Our Process for Your Animation Production</h1>
                     <p class="ivy_desc">We have an effective process for working on animation</p>
                     <Carousel
+                    v-if="processList.length!==0"
                     ref="myCarousel"
                     :items-to-show="2" 
                     :wrap-around="true" 

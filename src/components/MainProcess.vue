@@ -139,7 +139,6 @@
                     .ivy_desc{
                         padding-bottom: 2rem
                     }
-    
                     .carousel__item {
                         @include flex(column, center, center, nowrap);
                         height: 100%;
@@ -162,12 +161,10 @@
                                 margin: auto;
                             }
                         }
-    
                         h1{
                             margin: 1rem 0;
-                            font-size: 1.5rem;
+                            font-size: 2rem;
                         }
-    
                         .ivy_index_banner{
                             position: absolute;
                             display: flex;
@@ -181,6 +178,8 @@
                             height: 100px;
                             color: $darkGrey;
                         }
+
+
                     }
                 
                     .carousel__slide {

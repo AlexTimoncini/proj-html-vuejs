@@ -144,10 +144,7 @@
                     margin: 0 auto;
 
                     .ivy_heading{
-                        opacity: 0;
-                        transform: translateY(-20px);
-                        transition: all 1s linear;
-                        transition-delay: 200ms;
+                        @include slide_from_top_start();
                         .ivy_slogan{
                             color: $blue;
                             padding-bottom: 1.5rem;
@@ -162,8 +159,7 @@
                     }
 
                     .ivy_heading.slide_from_top{
-                        opacity: 1;
-                        transform: translateY(0);
+                        @include slide_end();
                     }
                     .carousel__item {
                         @include flex(column, center, center, nowrap);

@@ -72,16 +72,12 @@
         .container_size{
             padding: 100px 0;
             h1{
-                opacity: 0;
-                transform: translateY(-20px);
-                font-size: 3.5rem;
-                margin-bottom: 5rem;
-                transition: all 1s linear;
-                transition-delay: 200ms;
+            @include slide_from_top_start();
+            font-size: 3.5rem;
+            margin-bottom: 5rem;
             }
             h1.slide_from_top{
-                opacity: 1;
-                transform: translateY(0);
+                @include slide_end();
             }
 
             .ivy_cards{

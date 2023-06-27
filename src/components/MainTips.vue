@@ -75,11 +75,7 @@
             width: 60%;
             margin: 0 auto;
             padding-bottom: 50px;
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: all 1s linear;
-            transition-delay: 200ms;
-
+            @include slide_from_top_start();
             h1{
                 font-size: 3.5rem;
                 margin-bottom: 1rem;
@@ -91,8 +87,7 @@
             }
         }
         .ivy_small_container.slide_from_top{
-            opacity: 1;
-            transform: translateY(0);
+            @include slide_end();
         }
         .ivy_email{
             width: 50%;

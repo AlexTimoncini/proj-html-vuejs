@@ -12,3 +12,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin slide_from_top_start(){
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 1s linear;
+    transition-delay: 200ms;
+}
+
+@mixin slide_from_down_start(){
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s linear;
+}
+
+@mixin slide_end(){
+    opacity: 1;
+    transform: translateY(0);
+}

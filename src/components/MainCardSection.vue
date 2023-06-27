@@ -92,10 +92,11 @@
                 background-color: antiquewhite;
                 border-radius: 35px;
                 border: 1px solid rgb(178,181,210);
-                transition: all 0.2s linear;
                 transform: translateY(20px);
                 opacity: 0;
-                transition: all 1s linear;
+                &:hover{
+                    border: 1px solid transparent;
+                }
                 img{
                     margin: 0 auto;
                 }
@@ -110,35 +111,34 @@
             }
 
             .ivy_card:nth-child(1){
-                background: linear-gradient(#ffffff, #FFF2EA);
-                transition-delay: 200ms;
+                background-image: linear-gradient(#ffffff, #FFF2EA);
+                transition: transform 1s linear 200ms;
+                transition: opacity 1s linear 200ms;
                 &:hover{
-                    background: linear-gradient(#FFF2EA,#ffffff );
-                    border-color: transparent;
+                    background-image: linear-gradient(#FFF2EA,#ffffff );
                 }
             }
 
             .ivy_card:nth-child(2){
-                background: linear-gradient(#ffffff, #EEECFC);
-                transition-delay: 400ms;
+                background-image: linear-gradient(#ffffff, #EEECFC);
+                transition: transform 1s linear 400ms;
+                transition: opacity 1s linear 400ms;
                 &:hover{
-                    background: linear-gradient(#EEECFC,#ffffff );
-                    border-color: transparent;
+                    background-image: linear-gradient(#EEECFC,#ffffff );
                 }
             }
 
             .ivy_card:nth-child(3){
-                background: linear-gradient(#ffffff, #FFE7E8);
-                transition-delay: 600ms;
+                background-image: linear-gradient(#ffffff, #FFE7E8);
+                transition: transform 1s linear 600ms;
+                transition: opacity 1s linear 600ms;
                 &:hover{
-                    background: linear-gradient(#FFE7E8,#ffffff );
-                    border-color: transparent;
+                    background-image: linear-gradient(#FFE7E8,#ffffff );
                 }
             }
 
             .ivy_card.spawn{
-                opacity: 1;
-                transform: translateY(0);
+                @include slide_end();
             }
         }
         .ivy_rocket{
@@ -148,6 +148,7 @@
             height: 200px;
             z-index: -1;
             display: block;
+
         }
 
         .ivy_left_man{

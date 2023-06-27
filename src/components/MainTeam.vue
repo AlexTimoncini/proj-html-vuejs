@@ -1,6 +1,6 @@
 <script>
     import 'vue3-carousel/dist/carousel.css'
-    import { Carousel, Slide } from 'vue3-carousel';
+    import { Carousel, Slide, Pagination } from 'vue3-carousel';
     import { ref } from 'vue';
     const myCarousel = ref(null);
     export default {
@@ -8,6 +8,7 @@
         components: {
             Carousel,
             Slide,
+            Pagination
         },
         data() {
             return {
@@ -80,37 +81,41 @@
                 :autoplay="2000" 
                 :pauseAutoplayOnHover="true" 
                 :snapAlign="'start'">
-                    <Slide v-for="member in teamList" :key="member">
-                        <div class="carousel__item">
-                            <div class="ivy_card">
-                                <div class="ivy_icon_box">
-                                    <img :src="getImagePath(member.pfp)" :alt="member.name + 'Profile picture'">
-                                </div>
-                                <h1>{{ member.name }}</h1>
-                                <h2>{{ member.position }}</h2>
-                                <div class="ivy_social_box">
-                                    <a :href="member.facebook">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </a>
-                                    <a :href="member.twitter">
-                                        <i class="fa-brands fa-twitter"></i>                
-                                    </a>
-                                    <a :href="member.instagram">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                </div>
+                <Slide v-for="member in teamList" :key="member">
+                    <div class="carousel__item">
+                        <div class="ivy_card">
+                            <div class="ivy_icon_box">
+                                <img :src="getImagePath(member.pfp)" :alt="member.name + 'Profile picture'">
+                            </div>
+                            <h1>{{ member.name }}</h1>
+                            <h2>{{ member.position }}</h2>
+                            <div class="ivy_social_box">
+                                <a :href="member.facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a :href="member.twitter">
+                                    <i class="fa-brands fa-twitter"></i>                
+                                </a>
+                                <a :href="member.instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
                             </div>
                         </div>
-                    </Slide>
+                    </div>
+                </Slide>
+                <template #addons>
+                    <div class="ivy_carousel_nav">
+                        <button @click="prev">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <Pagination />
+                        <button @click="next">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </template>
             </Carousel>
-            <div class="ivy_carousel_nav">
-                <button @click="prev">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <button @click="next">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
+
         </div>
     </section>
 </template>
@@ -185,30 +190,30 @@
             }
         }
         .ivy_carousel_nav{
-                        display: flex;
-                        justify-content: center;
-                        column-gap: 10px;
-                        margin-top: 10px;
-                        button{
-                            @include flex();
-                            border: 1px solid $darkGrey;
-                            border-radius: 50%;
-                            color: $darkGrey;
-                            padding: 1rem;
-                            font-size: 1.3rem;
-                            background: none;
-                            width: 50px;
-                            height: 50px;
-                            cursor: pointer;
-                            transition: all 0.2s linear;
-    
-                            &:hover{
-                                background-color: $orange;
-                                border-color: $orange;
-                                color: $white;
-                            }
-                        }
-                    }
+            @include flex();
+            column-gap: 10px;
+            margin-top: 10px;
+            button{
+                @include flex();
+                border: 1px solid $darkGrey;
+                border-radius: 50%;
+                color: $darkGrey;
+                padding: 1rem;
+                font-size: 1.3rem;
+                background: none;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                transition: all 0.2s linear;
+                margin-top: 0.6rem;
+
+                &:hover{
+                    background-color: $orange;
+                    border-color: $orange;
+                    color: $white;
+                }
+            }
+        }
         .carousel__slide {
             padding: 10px;
         }

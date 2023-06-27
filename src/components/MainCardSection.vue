@@ -125,6 +125,7 @@
             bottom: 5px;
             height: 200px;
             z-index: -1;
+            display: block;
         }
 
         .ivy_left_man{

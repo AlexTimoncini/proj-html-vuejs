@@ -12,6 +12,7 @@ box-sizing: border-box;
 body{
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     overflow-x: hidden;
+    user-select: none;
 }
 
 .header_container_size{

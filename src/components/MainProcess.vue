@@ -116,6 +116,7 @@
                     top: 0;
                     transform: translateX(-50%);
                     transition: all 0.2s linear;
+                    display: block;
 
                     &:hover{
                         transform: translateX(-47%);
@@ -180,7 +181,6 @@
 
 
                     }
-                
                     .carousel__slide {
                         padding: 10px;
                     }
@@ -223,6 +223,7 @@
             bottom: 5px;
             height: 200px;
             z-index: -1;
+            display: block;
             }
         }
     }

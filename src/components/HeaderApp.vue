@@ -34,6 +34,7 @@
 
         img{
             position: absolute;
+            display: block;
         }
         /**BACKGROUND IMAGES BEHAVIOUR**/
         #bgGradient{

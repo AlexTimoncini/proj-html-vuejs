@@ -90,6 +90,7 @@
             position: absolute;
             width: 100%;
             left: 0;
+            display: block;
         }
         .wave_top{
             top: 0;

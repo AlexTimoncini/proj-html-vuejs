@@ -230,6 +230,7 @@
 
         #red_circle_left{
             position: absolute;
+            display: block;
             left: 0;
             top: 10%;
             z-index: -2;
@@ -248,6 +249,7 @@
         }
         #red_circle_right{
             position: absolute;
+            display: block;
             right: -20px;
             top: 10%;
             transform: translateY(-50%);

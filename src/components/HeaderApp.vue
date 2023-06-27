@@ -53,11 +53,13 @@
             top: 300px;
             left: 100px;
             animation: floatUpDown 4s linear infinite;
+            z-index: -1;
         }
         #rightSpaceMan{
             top: 300px;
             right: 100px;
             animation: floatUpDown 4s linear infinite;
+            z-index: -1;
         }
         #leftStars{
             top: 100px;

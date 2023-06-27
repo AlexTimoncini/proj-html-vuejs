@@ -38,7 +38,9 @@
                 </div>
             </div>
         </div>
+        <!--BACKGROUND IMAGES-->
         <img src="../assets/shape-bottom.png" alt="white wavy shape" class="wave wave_bot">
+        <img src="../assets/globe.png" alt="globe img" id="globeRotating">
     </section>
 </template>
 
@@ -51,7 +53,7 @@
         color: $white;
         text-align: center;
         position: relative;
-
+        z-index: -2;
         .container_size{
             padding: 100px 0;
             h1{
@@ -93,11 +95,28 @@
             display: block;
         }
         .wave_top{
-            top: 0;
+            top: -1px;
         }
         .wave_bot{
-            bottom: 0;
+            bottom: -1px;
         }
-        
+        #globeRotating{
+            position: absolute;
+            left: 42%;
+            top: 10%;
+            height: 80%;
+            animation: spin 5s linear infinite;
+            z-index: -1;
+            display: block;
+        }
+
+        @keyframes spin {
+            0%{
+                transform: rotate(0);
+            }
+            100%{
+                transform: rotate(1turn);
+            }
+        }
     }
 </style>

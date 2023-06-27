@@ -132,6 +132,7 @@
         .ivy_small_container{
             width: 60%;
             margin: 0 auto;
+            text-align: center;
             .ivy_slogan{
                 color: $blue;
                 padding-bottom: 1.5rem;

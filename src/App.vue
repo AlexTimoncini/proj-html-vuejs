@@ -38,7 +38,9 @@ import AppLoader from './components/AppLoader.vue';
       <MainApp />
       <FooterApp />
     </div>
-    <AppLoader :class="showLoader ? '' : 'hidden'"/>
+    <div class="loader" :class="showLoader ? '' : 'hidden'">
+      <AppLoader />
+    </div>
 </template>
 
 <style lang="scss">

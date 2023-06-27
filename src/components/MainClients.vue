@@ -1,6 +1,48 @@
 <script>
+    import { Carousel, Slide } from 'vue3-carousel';
+    import { ref } from 'vue';
+    const myCarousel = ref(null);
     export default {
         name: 'MainClients',
+        components: {
+            Carousel,
+            Slide,
+        },
+        data() {
+            return {
+                clientList: [
+                    {
+                        name: '',
+                        logo: '../assets/sponsor1.png'
+                    },
+                    {
+                        name: '',
+                        logo: '../assets/sponsor2.png'
+                    },
+                    {
+                        name: '',
+                        logo: '../assets/sponsor3.png'
+                    },
+                    {
+                        name: '',
+                        logo: '../assets/sponsor4.png'
+                    },
+                    {
+                        name: '',
+                        logo: '../assets/sponsor5.png'
+                    },
+                    {
+                        name: '',
+                        logo: '../assets/sponsor6.png'
+                    },
+                ]
+            }
+        },
+        methods: {
+            getImagePath: function(imgPath) {
+                return new URL(imgPath, import.meta.url).href;
+            }
+        }
     }
 </script>
 
@@ -12,6 +54,21 @@
                 <h1 class="ivy_title">We Love Our Clients</h1>
                 <p>We are trusted throughout adland and have a wealth of recommendations from start-ups to renowned global brands.</p>
             </div>
+            <Carousel
+            ref="myCarousel"
+            :items-to-show="6" 
+            :wrap-around="true" 
+            :autoplay="2000" 
+            :pauseAutoplayOnHover="true" 
+            :snapAlign="'start'">
+                <Slide v-for="client in clientList" :key="client">
+                    <div class="carousel__item">
+                        <div class="ivy_icon_box">
+                            <img :src="getImagePath(client.logo)" :alt="client.name">
+                        </div>
+                    </div>
+                </Slide>
+            </Carousel>
         </div>
     </section>
 </template>
@@ -20,11 +77,12 @@
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixin' as *;
     #ourClients{
-        margin-top: 500px;
-        padding-bottom: 100px;
+        padding: 100px;
         .ivy_small_container{
             width: 60%;
             margin: 0 auto;
+            text-align: center;
+            padding-bottom: 3rem;
             .ivy_slogan{
                 color: $blue;
                 padding-bottom: 1.5rem;

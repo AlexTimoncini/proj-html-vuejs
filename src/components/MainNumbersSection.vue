@@ -23,6 +23,21 @@
                 ],
             }
         },
+        mounted(){
+            this.observeTitle();
+        },
+        methods: {
+            observeTitle(){
+                const observer = new IntersectionObserver((entries, observer) =>{
+                    entries.filter(e => e.isIntersecting).forEach(entry =>{
+                        entry.target.classList.add('slide_from_top');
+                        observer.unobserve(entry.target);
+                    });
+                });
+                const titles = document.querySelectorAll('h1')
+                titles.forEach(title => observer.observe(title)); 
+            }
+        },
     }
 </script>
 
@@ -57,8 +72,16 @@
         .container_size{
             padding: 100px 0;
             h1{
+                opacity: 0;
+                transform: translateY(-20px);
                 font-size: 3.5rem;
                 margin-bottom: 5rem;
+                transition: all 1s linear;
+                transition-delay: 200ms;
+            }
+            h1.slide_from_top{
+                opacity: 1;
+                transform: translateY(0);
             }
 
             .ivy_cards{

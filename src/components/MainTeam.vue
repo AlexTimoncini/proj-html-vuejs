@@ -117,6 +117,9 @@
             </Carousel>
 
         </div>
+        <!--BACKGROUND IMAGES-->
+        <img src="../assets/shape.png" alt="red mega dot" id="red_circle_left">
+        <img src="../assets/shape2.png" alt="red mega dot" id="red_circle_right">
     </section>
 </template>
 
@@ -125,6 +128,7 @@
     @use '../styles/partials/mixin' as *;
     #ourTeam{
         padding-bottom: 100px;
+        position: relative;
         .ivy_small_container{
             width: 60%;
             margin: 0 auto;
@@ -221,6 +225,44 @@
         .carousel__next {
             box-sizing: content-box;
             border: 5px solid transparent;
+        }
+
+        #red_circle_left{
+            position: absolute;
+            left: 0;
+            top: 10%;
+            z-index: -2;
+            animation: zoominout 3s linear infinite;
+        }
+        @keyframes zoominout {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(0.9);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        #red_circle_right{
+            position: absolute;
+            right: -20px;
+            top: 10%;
+            transform: translateY(-50%);
+            z-index: -2;
+            animation: slidein 3s linear infinite;
+        }
+        @keyframes slidein {
+            0%{
+                transform: translateX(0);
+            }
+            50%{
+                transform: translateX(-25px);
+            }
+            100%{
+                transform: translateX(0);
+            }
         }
     }
 </style>

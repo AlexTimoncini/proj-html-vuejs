@@ -60,7 +60,6 @@
 <style lang="scss" scoped>
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixin' as *;
-
     #animationLove{
         position: relative;
         text-align: center;
@@ -148,7 +147,6 @@
             height: 200px;
             z-index: -1;
             display: block;
-
         }
 
         .ivy_left_man{

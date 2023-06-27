@@ -24,6 +24,21 @@
                 userMail: '',
             }
         },
+        methods: {
+            observeTitle(){
+                const observer = new IntersectionObserver((entries, observer) =>{
+                    entries.filter(e => e.isIntersecting).forEach(entry =>{
+                        entry.target.classList.add('slide_from_top');
+                        observer.unobserve(entry.target);
+                    });
+                });
+                const titles = document.querySelectorAll('.ivy_small_container')
+                titles.forEach(title => observer.observe(title));
+            },
+        },
+        mounted() {
+            this.observeTitle();
+        },
     }
 </script>
 
@@ -60,6 +75,11 @@
             width: 60%;
             margin: 0 auto;
             padding-bottom: 50px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 1s linear;
+            transition-delay: 200ms;
+
             h1{
                 font-size: 3.5rem;
                 margin-bottom: 1rem;
@@ -70,7 +90,10 @@
                 padding-bottom: 1.5rem;
             }
         }
-
+        .ivy_small_container.slide_from_top{
+            opacity: 1;
+            transform: translateY(0);
+        }
         .ivy_email{
             width: 50%;
             margin: 0 auto;

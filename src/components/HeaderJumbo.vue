@@ -5,7 +5,7 @@
 </script>
 
 <template>
-    <section id="jumbotron" class="container_size">
+    <section id="jumbotron" class="header_container_size">
         <h2 class="ivy_slogan">Imagine, Create, Experience</h2>
         <h1 class="ivy_title">We Animate <br>With Ninja-Like Precision</h1>
         <p class="ivy_desc">We are a character-driven animation studio striving to make high-quality animations.</p>

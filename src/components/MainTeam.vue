@@ -46,7 +46,20 @@
                         instagram: '#',
                     },
                 ],
-
+                breakpoints: {
+                    767: {
+                        itemsToShow: 2,
+                        snapAlign: 'start'
+                    },
+                    992: {
+                        itemsToShow: 3,
+                        snapAlign: 'start'
+                    },
+                    1400: {
+                        itemsToShow: 4,
+                        snapAlign: 'start'
+                    }
+                }
             }
         },
         mounted() {
@@ -87,11 +100,12 @@
             </div>
             <Carousel
                 ref="TeamCarousel"
-                :items-to-show="4" 
+                :breakpoints="breakpoints"
+                :items-to-show="1" 
                 :wrap-around="true" 
                 :autoplay="2000" 
                 :pauseAutoplayOnHover="true" 
-                :snapAlign="'start'">
+                :snapAlign="'center'">
                 <Slide v-for="member in teamList" :key="member">
                     <div class="carousel__item">
                         <div class="ivy_card">
@@ -283,5 +297,17 @@
                 transform: translateX(0);
             }
         }
+
     }
+    @media only screen and (max-width: 992px){
+        #ourTeam .ivy_small_container{
+            width: 100%;
+        }
+    }
+    @media only screen and (max-width: 576px){
+        #ourTeam #red_circle_left{
+            display: none;
+        }
+    }
+
 </style>

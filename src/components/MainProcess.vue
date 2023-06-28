@@ -1,7 +1,8 @@
 <script>
+    import 'vue3-carousel/dist/carousel.css'
     import { Carousel, Slide } from 'vue3-carousel';
     import { ref } from 'vue';
-    const myCarousel = ref(null);
+    const processCarousel = ref(null);
     export default {
         name: 'MainProcess',
         components: {
@@ -35,15 +36,15 @@
             }
         },
         mounted() {
-            this.myCarousel = this.$refs.myCarousel;
+            this.processCarousel = this.$refs.processCarousel;
             this.observeTitle();
         },
         methods: {
             prev(){
-                this.myCarousel.prev()
+                this.processCarousel.prev()
             },
             next(){
-                this.myCarousel.next()
+                this.processCarousel.next()
             },
             getImagePath: function(imgPath) {
                 return new URL(imgPath, import.meta.url).href;
@@ -76,8 +77,7 @@
                         <p class="ivy_desc">We have an effective process for working on animation</p>
                     </div>
                     <Carousel
-                    v-if="processList.length!==0"
-                    ref="myCarousel"
+                    ref="processCarousel"
                     :items-to-show="2" 
                     :wrap-around="true" 
                     :autoplay="2000" 

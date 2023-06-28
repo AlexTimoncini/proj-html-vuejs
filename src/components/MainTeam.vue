@@ -2,7 +2,7 @@
     import 'vue3-carousel/dist/carousel.css'
     import { Carousel, Slide, Pagination } from 'vue3-carousel';
     import { ref } from 'vue';
-    const myCarousel = ref(null);
+    const TeamCarousel = ref(null);
     export default {
         name: 'MainTeam',
         components: {
@@ -50,15 +50,15 @@
             }
         },
         mounted() {
-            this.myCarousel = this.$refs.myCarousel;
+            this.TeamCarousel = this.$refs.TeamCarousel;
             this.observeTitle();
         },
         methods: {
             prev(){
-                this.myCarousel.prev()
+                this.TeamCarousel.prev()
             },
             next(){
-                this.myCarousel.next()
+                this.TeamCarousel.next()
             },
             getImagePath: function(imgPath) {
                 return new URL(imgPath, import.meta.url).href;
@@ -86,8 +86,7 @@
                 <p>We create new worlds!Let’s collaborate and create engaging, effective, award-winning animations</p>
             </div>
             <Carousel
-                v-if="teamList.length!==0"
-                ref="myCarousel"
+                ref="TeamCarousel"
                 :items-to-show="4" 
                 :wrap-around="true" 
                 :autoplay="2000" 

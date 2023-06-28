@@ -19,7 +19,8 @@
         background-size: cover;
         height: 100vh;
         width: 100%;
-
+        position: absolute;
+        top: 0;
         .img_box{
             margin: auto;
             animation: slide 3s linear infinite;

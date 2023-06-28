@@ -1,4 +1,5 @@
 <script>
+    import 'vue3-carousel/dist/carousel.css'
     import { Carousel, Slide } from 'vue3-carousel';
     import { ref } from 'vue';
     const myCarousel = ref(null);
@@ -68,8 +69,6 @@
                 <p>We are trusted throughout adland and have a wealth of recommendations from start-ups to renowned global brands.</p>
             </div>
             <Carousel
-            v-if="clientList.length!==0"
-            ref="myCarousel"
             :items-to-show="6" 
             :wrap-around="true" 
             :autoplay="2000" 

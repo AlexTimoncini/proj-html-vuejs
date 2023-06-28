@@ -38,7 +38,7 @@ import AppLoader from './components/AppLoader.vue';
       <MainApp />
       <FooterApp />
     </div>
-    <div class="loader" :class="showLoader ? '' : 'hidden'">
+    <div class="loader" :class="showLoader ? '' : 'd-none'">
       <AppLoader />
     </div>
 </template>

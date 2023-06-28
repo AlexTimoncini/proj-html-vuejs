@@ -1,5 +1,4 @@
 <script>
-window.scrollTo(0, 2);
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
 import FooterApp from './components/FooterApp.vue';
@@ -16,20 +15,19 @@ import AppLoader from './components/AppLoader.vue';
     return {
       showLoader: true,
     };
-  },
-  mounted() {
-    this.loadingComplete();
-  },
-  methods: {
-    loadingComplete(){
-      window.addEventListener('load', () => {
-      console.log('FATTO AMMO');
-      setTimeout(()=>{
-        this.showLoader = false;
-      }, 1000);
-    });
+    },
+    mounted() {
+      this.loadingComplete();
+    },
+    methods: {
+      loadingComplete(){
+        window.addEventListener('load', () => {
+        setTimeout(()=>{
+          this.showLoader = false;
+        }, 1000);
+      });
+      },
     }
-  }
   }
 </script>
 

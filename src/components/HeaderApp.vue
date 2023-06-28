@@ -81,8 +81,8 @@
 
         }
         #globeRight{
-            top: 130px;
-            right: 600px;
+            top: 200px;
+            right: 30%;
             width: 100px;
             z-index: -5;
             animation: spin 4s linear infinite;
@@ -97,7 +97,7 @@
         }
         #ufo{
             top: 100px;
-            right: 300px;
+            right: 15%;
             animation: shake 2s linear infinite;
         }
         @keyframes floatUpDown {
@@ -154,6 +154,57 @@
                 transform: rotate(0);
             }
 
+        }
+    }
+
+    /**RESPONSIVVENESS**/
+    @media only screen and (max-width: 1600px){
+        header #leftSpaceMan{
+            left: 0;
+        }
+        header #rightSpaceMan{
+            right: 0;
+        }
+    }
+
+    @media only screen and (max-width: 992px){
+        header #leftStars{
+            display: none;
+        }
+        header #rightStars{
+            display: none;
+        }
+
+        header #globeTop{
+            display: none;
+        }
+
+        header #globeLeft{
+            width: 100px;
+        }
+        header #globeRight{
+            width: 80px;
+        }
+        header #ufo{
+            width: 80px;
+        }
+        header #leftSpaceMan{
+            width: 200px;
+        }
+        header #rightSpaceMan{
+            width: 200px;
+        }
+    }
+    
+    @media only screen and (max-width: 576px){
+        header #ufo{
+            display: none;
+        }
+        header #leftSpaceMan{
+            width: 150px;
+        }
+        header #rightSpaceMan{
+            width: 150px;
         }
     }
 </style>

@@ -36,7 +36,21 @@
                         name: '',
                         logo: '../assets/sponsor6.png'
                     },
-                ]
+                ],
+                breakpoints: {
+                    767: {
+                        itemsToShow: 3,
+                    },
+                    992: {
+                        itemsToShow: 4,
+                    },
+                    1200: {
+                        itemsToShow: 5,
+                    },
+                    1400: {
+                        itemsToShow: 6,
+                    }
+                }
             }
         },
         methods: {
@@ -69,7 +83,8 @@
                 <p>We are trusted throughout adland and have a wealth of recommendations from start-ups to renowned global brands.</p>
             </div>
             <Carousel
-            :items-to-show="6" 
+            :items-to-show="2" 
+            :breakpoints="breakpoints"
             :wrap-around="true" 
             :autoplay="2000" 
             :pauseAutoplayOnHover="true" 
@@ -90,7 +105,7 @@
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixin' as *;
     #ourClients{
-        padding: 100px;
+        padding: 100px 0;
         .ivy_small_container{
             width: 60%;
             margin: 0 auto;
@@ -107,9 +122,29 @@
                 padding-bottom: 1rem;
             }
         }
+        .carousel__item{
+            flex-grow: 1;
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+        .carousel__slide {
+            padding: 10px;
+        }
+        .carousel__prev,
+        .carousel__next {
+            box-sizing: content-box;
+            border: 5px solid transparent;
+        }
 
         .ivy_small_container.slide_from_top{
             @include slide_end();
+        }
+    }
+    @media only screen and (max-width: 992px) {
+        #ourClients .ivy_small_container{
+            width: 100%;
         }
     }
 </style>

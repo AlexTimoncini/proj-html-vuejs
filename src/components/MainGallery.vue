@@ -110,6 +110,7 @@
                 }
                 .ivy_wrapper{
                     overflow: hidden;
+                    border-radius: 20px;
                     transition: all 0.3s linear;
                 }
                 .ivy_hover_wrap{

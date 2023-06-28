@@ -45,5 +45,4 @@ import AppLoader from './components/AppLoader.vue';
 
 <style lang="scss">
   @import url('./styles/general.scss');
-
 </style>

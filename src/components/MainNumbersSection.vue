@@ -45,17 +45,17 @@
     <section id="counter">
         <img src="../assets/shape-top.png" alt="white wavy shape" class="wave wave_top" loading="lazy">
         <div class="container_size">
-            <h1>Anidio Quick Facts</h1>
+            <h1 class="ivy_title">Anidio Quick Facts</h1>
             <div class="ivy_cards">
-                <div class="ivy_card" v-for="number in anidioNumbers">
+                <div class="ivy_card_counter" v-for="number in anidioNumbers">
                     <h2>{{ number.amount }}</h2>
                     <p>{{ number.name }}</p>
                 </div>
             </div>
         </div>
         <!--BACKGROUND IMAGES-->
-        <img src="../assets/shape-bottom.png" alt="white wavy shape" class="wave wave_bot" loading="lazy">
         <img src="../assets/globe.png" alt="globe img" id="globeRotating" loading="lazy">
+        <img src="../assets/shape-bottom.png" alt="white wavy shape" class="wave wave_bot" loading="lazy">
     </section>
 </template>
 
@@ -68,30 +68,28 @@
         color: $white;
         text-align: center;
         position: relative;
-        z-index: -2;
         .container_size{
             padding: 100px 0;
-            h1{
+            .ivy_title{
             @include slide_from_top_start();
             font-size: 3.5rem;
             margin-bottom: 5rem;
+            z-index: 2;
             }
-            h1.slide_from_top{
+            .ivy_title.slide_from_top{
                 @include slide_end();
             }
-
             .ivy_cards{
                 @include flex();
                 column-gap: 2rem;
-
-                .ivy_card{
+                .ivy_card_counter{
                     border: 1px solid $darkGrey;
                     width: calc(100% / 4);
-                    flex-shrink: 1;
                     padding: 3rem 0;
                     border-radius: 20px;
                     cursor: pointer;
                     transition: all 0.1s linear;
+                    z-index: 2;
                     h2{
                         font-size: 3rem;
                     }
@@ -100,7 +98,6 @@
                         font-size: 1.1rem;
                         color: $orange;
                     }
-
                     &:hover{
                         transform: rotateY(20deg) rotateX(-20deg);
                     }
@@ -125,7 +122,6 @@
             top: 10%;
             height: 80%;
             animation: spin 5s linear infinite;
-            z-index: -1;
             display: block;
         }
 

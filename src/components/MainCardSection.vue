@@ -171,6 +171,7 @@
             top: 50%;
             z-index: -1;
             transform: translateY(-50%);
+            opacity: 0.7;
         }
         .ivy_center_man{
             @include positionCenter();

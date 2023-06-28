@@ -32,12 +32,12 @@ import AppLoader from './components/AppLoader.vue';
 </script>
 
 <template>
-    <div class="app" :class="showLoader ? 'hidden' : ''">
+    <div class="app" v-if="!showLoader">
       <HeaderApp />
       <MainApp />
       <FooterApp />
     </div>
-    <div class="loader" :class="showLoader ? '' : 'd-none'">
+    <div class="loader" v-else>
       <AppLoader />
     </div>
 </template>

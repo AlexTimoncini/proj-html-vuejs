@@ -72,6 +72,8 @@
     nav{
         padding: 1rem 0.2rem;
         position: relative;
+        z-index: 100;
+        background-color: transparent;
         .container_size{
             @include flex(row, space-between, center, nowrap);
             .ivy_nav_menu{
@@ -83,6 +85,10 @@
                         color: $white;
                         font-weight: bold;
                         font-size: 1.2rem;
+                        transition: all 0.3s linear;
+                        &:hover{
+                            color: $orange;
+                        }
                     }
                 }
     

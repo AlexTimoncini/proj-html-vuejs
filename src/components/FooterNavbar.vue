@@ -78,11 +78,14 @@
     
                 .ivy_nav_item{
                     margin: 0 0.6rem;
-    
                     a{
                         color: $purple;
                         font-weight: bold;
                         font-size: 1.2rem;
+                        transition: all 0.3s ease;
+                        &:hover{
+                            color: $blue;
+                        }
                     }
                 }
             }

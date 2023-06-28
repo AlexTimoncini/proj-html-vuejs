@@ -22,11 +22,11 @@ import AppLoader from './components/AppLoader.vue';
     methods: {
       loadingComplete(){
         window.addEventListener('load', () => {
-        setTimeout(()=>{
-          this.showLoader = false;
-        }, 1000);
-      });
-      },
+          setTimeout(()=>{
+            this.showLoader = false;
+          }, 1000);
+        });
+      }
     }
   }
 </script>

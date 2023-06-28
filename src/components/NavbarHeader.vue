@@ -113,31 +113,48 @@
     }
 
     /**MEDIA QUERIES**/
-    @media only screen and (max-width: 992px){
-
-        
+    @media only screen and (max-width: 992px){    
         nav .container_size .ivy_nav_menu{
             @include flex(column, center, center, nowrap);
             position: absolute;
             top: 100%;
             left: 0;
-            width: 100%;
+            width: calc(100% - 2rem);
             background-color: $purple;
             z-index: 1;
             transform: translateY(-50px);
             opacity: 0;
-            transition: all 0.5s ease;
+            transition: transform 0.5s ease;
         }
 
         nav .container_size .ivy_nav_menu.visible{
             height: auto;
             opacity: 1;
             transform: translateY(0px);
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            align-items: flex-start;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        nav .container_size .ivy_nav_menu.visible .ivy_nav_item{
+            border: 1px solid $darkGrey;
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            width: 100%;
+            text-align: start;
         }
 
         nav .container_size .ivy_nav_toggle{
             display: block;
             z-index: 2;
+        }
+    }
+
+    @media only screen and (max-width: 1200px){
+        nav .container_size .ivy_nav_menu .ivy_nav_item{
+            margin: 0 0.4rem;
         }
     }
 </style>

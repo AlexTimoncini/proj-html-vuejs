@@ -33,6 +33,12 @@
                         img: '../assets/process2.png'
                     },
                 ],
+                breakpoints: {
+                    767: {
+                        itemsToShow: 2,
+                        snapAlign: 'start',
+                    }
+                }
             }
         },
         mounted() {
@@ -78,11 +84,12 @@
                     </div>
                     <Carousel
                     ref="processCarousel"
-                    :items-to-show="2" 
+                    :breakpoints="breakpoints"
+                    :items-to-show="1" 
                     :wrap-around="true" 
                     :autoplay="2000" 
                     :pauseAutoplayOnHover="true" 
-                    :snapAlign="'start'">
+                    :snapAlign="'center'">
                         <Slide v-for="slide, index in processList" :key="slide">
                             <div class="carousel__item">
                                 <div class="ivy_icon_box">
@@ -250,6 +257,44 @@
         }
     }
 
+    @media only screen and (max-width: 1200px){
+        #ourProcess .container_size{
+            flex-direction: column-reverse;
 
+            .ivy_left_side{
+                width: 100%;
+                height: 500px;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                
+                img{
+                    width: 70%;
+                    left: 50%;
+                }
+            }
+            .ivy_right_side{
+                width: 100%;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 992px){
+        #ourProcess .container_size .ivy_left_side{
+            height: 300px;
+        }
+
+    }
+
+    @media only screen and (max-width: 767px){
+        #ourProcess .container_size .ivy_left_side{
+            height: 200px;
+        }
+    }
+
+    @media only screen and (max-width: 576px){
+        #ourProcess .container_size .ivy_rocket{
+            display: none;
+        }
+    }
 
 </style>

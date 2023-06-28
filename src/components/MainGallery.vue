@@ -176,5 +176,18 @@
             margin-top: 1rem;
             cursor: pointer;
         }
+
     }
+    @media only screen and (max-width: 992px){
+        #ourWorks .ivy_small_container{
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 767px){
+        #ourWorks .ivy_cards .ivy_card{
+            width: calc((100% / 1) - 0.5rem)
+        }
+    }
+
 </style>

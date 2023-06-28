@@ -60,6 +60,7 @@
         <!-- Background Images -->
         <img src="../assets/smart4.png" alt="yellow rocket" class="ivy_rocket">
         <img src="../assets/smart.png" alt="user with smart glasses" class="ivy_left_man">
+        <img src="../assets/smarttwo.png" alt="user with smart glasses" class="ivy_center_man">
     </section>
 </template>
 
@@ -112,6 +113,7 @@
                     }
                     .ivy_card_desc{
                         font-size: 1.1rem;
+                        line-height: 1.5rem;
                     }
 
                     &:hover{
@@ -169,6 +171,53 @@
             top: 50%;
             z-index: -1;
             transform: translateY(-50%);
+        }
+        .ivy_center_man{
+            @include positionCenter();
+            z-index: -1;
+            opacity: 0.3;
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 1200px){
+        #animationLove .ivy_left_man{
+            display: none;
+        }
+
+        #animationLove .ivy_center_man{
+            display: block;
+        }
+
+        #animationLove .ivy_cards{
+            margin: 3rem auto 5rem;
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 992px){
+
+        #animationLove .ivy_small_container{
+            width: 100%;
+        }
+        #animationLove .ivy_cards .ivy_card{
+            width: calc(100% / 2 - 2rem);
+        }
+    }
+
+    @media only screen and (max-width: 767px){
+        #animationLove .ivy_cards .ivy_card{
+            width: calc(100% / 1.5);
+        }
+    }
+
+    @media only screen and (max-width: 576px){
+        #animationLove .ivy_cards .ivy_card{
+            width: calc(100%);
+        }
+
+        #animationLove .ivy_rocket{
+            display: none;
         }
     }
 </style>

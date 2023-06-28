@@ -154,10 +154,10 @@
                 transition-delay: 400ms;
             }
             .ivy_card:nth-child(3){
-                transition-delay: 600ms;
+                transition-delay: 200ms;
             }
             .ivy_card:nth-child(4){
-                transition-delay: 800ms;
+                transition-delay: 400ms;
             }
 
             .ivy_card.slide_from_down{

@@ -15,7 +15,7 @@
         <button class="ivy_btn pink_border">
             <a href="#">Portfolio</a>
         </button>
-        <div class="ivy_hero">
+        <div class="ivy_hero container_size">
             <img src="../assets/middle.png" alt="">
             <button class="ivy_playpause">
                 <i class="fa-solid fa-play"></i>
@@ -50,8 +50,8 @@
             padding: 0.9rem 2.5rem;
             border-radius: 35px;
             margin-right: 1.2rem;
+            margin-bottom: 1.2rem;
             border: none;
-
             a{
                 color: $purple;
                 font-weight: 400;
@@ -74,7 +74,7 @@
 
         .ivy_hero{
             width: 100%;
-            margin-top: 80px;
+            margin-top: 50px;
             position: relative;
             z-index: 2;
             img{

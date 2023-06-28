@@ -74,7 +74,7 @@
             border-bottom: 1px solid $darkGrey;
     
             .ivy_nav_menu{
-                @include flex();
+                @include flex(row, center, center, wrap);
     
                 .ivy_nav_item{
                     margin: 0 0.6rem;
@@ -113,6 +113,23 @@
                     color: $white;
                     background-color: $orange;
                 }
+            }
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .container_size #copyright{
+            @include flex(column-reverse, space-between, center, nowrap);
+
+            .ivy_social_box a{
+                margin: 0 0.5rem 1rem;
+            }
+        }
+
+        .container_size nav{
+            @include flex(column, space-between, center, nowrap);
+
+            img{
+                margin-bottom: 1rem;
             }
         }
     }

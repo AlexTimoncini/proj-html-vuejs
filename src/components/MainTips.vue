@@ -90,7 +90,7 @@
             @include slide_end();
         }
         .ivy_email{
-            width: 50%;
+            width: 60%;
             margin: 0 auto;
             background-color: $white;
             padding: 1rem;
@@ -126,6 +126,15 @@
             height: 50px;
             bottom: 0;
             display: block;
+        }
+    }
+    @media only screen and (max-width: 992px) {
+        #yourTips .ivy_small_container{
+            width: 100%;
+        }
+
+        #yourTips .ivy_email{
+            width: 100%;
         }
     }
 </style>

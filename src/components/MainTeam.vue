@@ -190,10 +190,14 @@
                 left: 50%;
                 bottom: 100%;
                 transform: translate(-50%, 70%);
+                transition: all 0.33s ease-in-out;
                 img{
                     width: 100%;
                     display: block;
                 }
+            }
+            &:hover .ivy_icon_box{
+                transform: translate(-50%, 75%);
             }
             h1{
                 margin-top: 10rem;

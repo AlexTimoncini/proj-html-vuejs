@@ -80,11 +80,12 @@
                 @include slide_end();
             }
             .ivy_cards{
-                @include flex();
-                column-gap: 2rem;
+                @include flex(row, center, center, wrap);
+                flex-grow: 1;
+                gap: 2rem;
                 .ivy_card_counter{
                     border: 1px solid $darkGrey;
-                    width: calc(100% / 4);
+                    width: calc(100% / 4 - 2rem);
                     padding: 3rem 0;
                     border-radius: 20px;
                     cursor: pointer;
@@ -119,8 +120,8 @@
         #globeRotating{
             position: absolute;
             left: 42%;
-            top: 10%;
-            height: 80%;
+            top: 30%;
+            height: 50%;
             animation: spin 5s linear infinite;
             display: block;
         }
@@ -134,4 +135,33 @@
             }
         }
     }
+
+        @media only screen and (max-width: 1200px){
+
+            #counter #globeRotating{
+                left: 30%;
+            }
+            #counter .container_size .ivy_cards .ivy_card_counter{
+                width: calc(100% / 3 - 2rem);
+                
+            }
+        }
+
+        @media only screen and (max-width: 992px){
+            #counter #globeRotating{
+                left: 25%;
+            }
+            #counter .container_size .ivy_cards .ivy_card_counter{
+                width: calc(100% / 2 - 2rem);
+            }
+        }
+
+        @media only screen and (max-width: 576px){
+            #counter #globeRotating{
+                left: 0%;
+            }
+            #counter .container_size .ivy_cards .ivy_card_counter{
+                width: calc(100%);
+            }
+        }
 </style>
